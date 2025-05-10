@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; child-src 'self' https: http:;"
+    />
+    <title>Electron Browser</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="browser-container">
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex align-items-center">
+          <div class="d-flex">
+            <button class="btn btn-outline-secondary me-1 nav-btn" id="back-button" title="Zurück">
+              ←
+            </button>
+            <button class="btn btn-outline-secondary me-1 nav-btn" id="forward-button" title="Vorwärts">
+              →
+            </button>
+            <button class="btn btn-outline-secondary me-2 nav-btn" id="reload-button" title="Neu laden">
+              ↻
+            </button>
+          </div>
+          
+          <div class="flex-grow-1 d-flex">
+            <input type="text" class="form-control me-2" id="url-bar" placeholder="URL eingeben">
+            <button class="btn btn-primary" id="go-button">Los</button>
+          </div>
+          
+          <button class="btn btn-outline-secondary ms-2" id="incognito-button" title="Inkognito-Modus">
+            🕵️
+          </button>
+        </div>
+      </nav>
+
+      <!-- Innerhalb des .browser-container divs, nach der Tab-Leiste -->
+        <div class="tab-container" id="tab-container">
+            <button class="new-tab-button" id="new-tab-button" title="Neuer Tab">+</button>
+        </div>
+            
+
+      
+      
+      <!-- Webview Container -->
+      <div id="webview-containers" class="webview-area">     
+      <webview id="webview" src="https://www.google.com"></webview>
+      </div>
+    </div>
+
+    
+
+    <!-- Optional Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="renderer.js"></script>
+  </body>
+</html>

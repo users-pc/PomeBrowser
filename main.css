@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+    .webview-area {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    }
+
+    .webview-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    }
+
+    .webview-container.active {
+    display: block;
+    }
+
+    webview {
+    width: 100%;
+    height: 100%;
+    border: none;
+    }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+   /* Neue Tab-Styles */
+   .tab-container {
+    display: flex;
+    background-color: #f1f3f4;
+    padding: 0 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .tab {
+    padding: 8px 28px 8px 10px;
+    margin: 4px 4px 0 0;
+    border-radius: 8px 8px 0 0;
+    background-color: #dee1e6;
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    position: relative;
+    cursor: pointer;
+    height: 32px;
+    font-size: 12px;
+  }
+  
+  .tab.active {
+    background-color: #fff;
+  }
+  
+  .tab-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }
+  
+  .tab-close {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    background: transparent;
+    border: none;
+  }
+  
+  .tab-close:hover {
+    background-color: #c1c7cd;
+  }
+  
+  .new-tab-button {
+    background: transparent;
+    border: none;
+    margin-top: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  .browser-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+
+  
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-btn {
+    width: 38px;
+  }
+
+    .incognito {
+    background-color: #35363a;
+    }
+
+    .incognito nav {
+    background-color: #202124 !important;
+    }
+
+    .incognito nav button, 
+    .incognito nav input {
+    background-color: #35363a;
+    border-color: #5f6368;
+    color: #e8eaed;
+    }
+
+    .incognito nav button:hover {
+    background-color: #3c4043;
+    color: white;
+    }
